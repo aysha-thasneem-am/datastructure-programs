@@ -86,7 +86,6 @@ void display()
         printf("\n The elements in STACK \n");
         for(i=top; i>=0; i--)
             printf("\n%d",stack[i]);
-        printf("\n Press Next Choice");
     }
     else
     {
@@ -103,4 +102,3 @@ void peek()
 	else
 		printf("Peek :%d",stack[top]);
 }
-
