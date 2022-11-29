@@ -12,12 +12,12 @@ int main()
 	int option;
 	do
 	{
-		printf("\n\n*******MENU*********");
-		printf("\n\n1. ENQUEUE");
-		printf("\n\n2. DEQUEUE");
-		printf("\n\n3. DISPLAY");
-		printf("\n\n4. EXIT");
-		printf("\n\nEnter your option : ");
+		printf("\n*******MENU*********");
+		printf("\n1. ENQUEUE");
+		printf("\n2. DEQUEUE");
+		printf("\n3. DISPLAY");
+		printf("\n4. EXIT");
+		printf("\nEnter your option : ");
 		scanf("%d",&option);
 		switch(option)
 		{
@@ -27,8 +27,12 @@ int main()
 					 break;
 			case 3 : display();
 					 break;
-		}
-	}while(option<5);
+			case 4 :  printf("\n\t EXIT POINT ");
+                			 break;
+            		default:
+				  printf ("\n\t Please Enter a Valid Choice(1/2/3/4/5)");
+                }
+	}while(option != 4);
 	return 0;
 }
 
@@ -70,7 +74,7 @@ void dequeue()
 void display()
 {
 	int i;
-	for(i=front; i<rear; i++)
+	for(i=front; i<=rear; i++)
 	{
 		printf("%d\t",queue[i]);
 	}
