@@ -154,11 +154,11 @@ void insert_pos()
 	struct node *ptr, *preptr, *newnode;
 	ptr = start;
 	cnt = count();
-	while (ptr != NULL)
+	/*while (ptr != NULL)
 	{
 		cnt++;
 		ptr = ptr->next;
-	}
+	}*/
 	printf("Total number of elements in linked list : %d. You can insert new elements based on this count", cnt);
 	printf("\nEnter the position : ");
 	scanf("%d", &pos);
