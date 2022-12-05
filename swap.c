@@ -1,31 +1,38 @@
 #include<stdio.h>
-void main()
-{ 
-  int a1[3],a2[3],temp,i;
-  printf("Enter elements to 1st array : ");
-  for(i=0;i<3;i++){
-   scanf("%d",&a1[i]);
-  }  
-
-  printf("Enter elements to 2nd array : ");
-  for(i=0;i<3;i++){
-   scanf("%d",&a2[i]);
-  }
-
-  for(i=0;i<3;i++){
-   temp = a2[i];
-   a2[i] = a1[i];
-   a1[i] = temp;
-   
-  }
-
-  printf("elements to 1st array after swapping : ");
-  for(i=0;i<3;i++){
-   printf("%d\n",a1[i]);
-  }  
-
-  printf("elements to 2nd array after swapping : ");
-  for(i=0;i<3;i++){
-   printf("%d\n",a2[i]);
-  }
+void main(){
+	int i,n,k,a[10],b[10],temp[10];
+	printf("enter size of the first array\n");
+	scanf("%d",&n);
+	printf("enter array elements\n");
+	for(i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	}
+	printf("first array:\n");
+	for(i=0;i<n;i++){
+		printf("%d\t",a[i]);
+	}
+	printf("\nenter size of the second array\n");
+	scanf("%d",&k);
+	printf("enter array elements\n");
+	for(i=0;i<k;i++){
+		scanf("%d",&b[i]);
+	}
+	printf("second array:\n");
+	for(i=0;i<k;i++){
+		printf("%d\t",b[i]);
+	}
+	for(i=0;i<k;i++){
+		temp[i]=a[i];
+		a[i]=b[i];
+		b[i]=temp[i];
+	}
+	printf("\nafter swap\n");
+	printf("first array:\n");
+	for(i=0;i<n;i++){
+		printf("%d\t",a[i]);
+	}
+	printf("\nsecond array:\n");
+	for(i=0;i<k;i++){
+		printf("%d\t",b[i]);
+	}
 }
